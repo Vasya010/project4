@@ -220,8 +220,9 @@ export default class Adminpage extends Component {
 
     return (
       <div className="admin-page">
+       
         <nav className="admin-navbar">
-          <h1>Добро пожаловать, {this.state.adminUsername}</h1>
+        <h1>Добро пожаловать, {this.state.adminUsername}</h1>
           <ul>
             <li>Пользователи</li>
             <li>Игры</li>
