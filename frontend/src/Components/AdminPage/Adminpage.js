@@ -216,7 +216,7 @@ export default class Adminpage extends Component {
   };
 
   render() {
-    const { users, games, purchasedGames, newGame, notification, adminUsername } = this.state;
+    const { users, games, purchasedGames, newGame, notification } = this.state;
 
     return (
       <div className="admin-page">
