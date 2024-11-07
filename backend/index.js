@@ -21,10 +21,11 @@ const secretKey = 'ваш_секретный_ключ'; // Добавьте эт
 
 // Настройка базы данных
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost', // Если переменная не установлена, используем localhost
-    user: process.env.DB_USER || 'cd26973_game', // Имя пользователя
-    password: process.env.DB_PASS || 'Vasya11091109', // Пароль
-    database: process.env.DB_NAME || 'cd26973_game' // Имя базы данных
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
 });
 
 
