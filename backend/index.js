@@ -21,11 +21,12 @@ const secretKey = 'ваш_секретный_ключ'; // Добавьте эт
 
 // Настройка базы данных
 const db = mysql.createConnection({
-    host: 'localhost', // Локальный сервер базы данных
-    user: 'cd26973_game', // Имя пользователя базы данных
-    password: 'Vasya11091109', // Пароль базы данных
-    database: 'cd26973_game' // Имя базы данных
+    host: process.env.DB_HOST || 'localhost', // Если переменная не установлена, используем localhost
+    user: process.env.DB_USER || 'cd26973_game', // Имя пользователя
+    password: process.env.DB_PASS || 'Vasya11091109', // Пароль
+    database: process.env.DB_NAME || 'cd26973_game' // Имя базы данных
 });
+
 
 app.get('/', (req, res) => {
     res.send('Сервер работает!'); // Ответ, который будет возвращён при GET запросе на '/'
