@@ -25,8 +25,9 @@ const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-
+    connectTimeout: 10000 // Установите 10 секунд таймаута
 });
+
 
 
 app.get('/', (req, res) => {
