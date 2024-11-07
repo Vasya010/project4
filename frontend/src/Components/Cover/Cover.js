@@ -1,6 +1,5 @@
 import React from 'react';
 import './Cover.css';
-import coverImage from './../../images/Hogwarts_Legacy_cover.jpg';
 import image11 from '../images/Scri1.png'
 
 const Cover = () => {
