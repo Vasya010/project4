@@ -22,9 +22,9 @@ const secretKey = 'ваш_секретный_ключ'; // Добавьте эт
 // Настройка базы данных
 const db = mysql.createConnection({
     host: 'localhost', // Локальный сервер базы данных
-    user: 'root', // Имя пользователя базы данных
-    password: 'root', // Пароль базы данных
-    database: 'game' // Имя базы данных
+    user: 'cd26973_game', // Имя пользователя базы данных
+    password: 'Vasya11091109', // Пароль базы данных
+    database: 'cd26973_game' // Имя базы данных
 });
 
 app.get('/', (req, res) => {
