@@ -19,14 +19,13 @@ const secretKey = 'ваш_секретный_ключ'; // Добавьте эт
 // Получаем секретный ключ из окружения
 ;
 
-// Настройка базы данных
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    port: process.env.DB_PORT, // исправлено
-    connectTimeout: 10000
+    port: process.env.DB_PORT || 5432, // задайте значение по умолчанию, если переменная не установлена
+    connectTimeout: 10000, // увеличьте время ожидания для подключения
 });
 
 
